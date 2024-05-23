@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="file"],
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ingredient-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ingredient-row label {
+  margin-right: 10px;
+}
+
+.ingredient-row input[type="number"],
+.ingredient-row input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#addIngredientButton {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#addIngredientButton:hover {
+  background-color: #0056b3;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Upload</title>
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+
+<body>
+  <div class="container">
+    <form id="ingredientForm" action="" method="post" enctype="multipart/form-data">
+      <div class="field">
+        <label for="title">Recipe Name</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+
+      <div class="field">
+        <label for="time">Total Time</label>
+        <input type="time" name="time" id="time">
+      </div>
+
+      <div class="field">
+        <label for="dishType">Dish Type</label>
+        <select id="dishType" name="dishType" required>
+          <option value="">Please Select</option>
+          <option value="Main Dish">Main Dish</option>
+          <option value="Side Dish">Side Dish</option>
+          <option value="Appetizer">Appetizer</option>
+          <option value="Soup">Soup</option>
+          <option value="Salad">Salad</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Drink">Drink</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="imageUpload">Photo</label>
+        <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+      </div>
+
+      <div class="field">
+        <label for="videoUpload">Video</label>
+        <input type="file" id="videoUpload" name="videoUpload" accept="video/*">
+      </div>
+
+      <h3>Ingredients</h3>
+      <div id="ingredientsContainer">
+        <div class="ingredient-row">
+          <label for="amount1">Amount</label>
+          <input type="number" id="amount1" name="amount[]" min="0" step="any" placeholder="e.g., 1.5">
+          <label for="ingredient1">Ingredient</label>
+          <input type="text" id="ingredient1" name="ingredient[]" placeholder="e.g., Sugar">
+        </div>
+      </div>
+      <button type="button" id="addIngredientButton">Add Ingredient</button>
+
+      <div class="field">
+        <label for="instructions">Instructions</label>
+        <textarea id="instructions" name="instructions" rows="6" required></textarea>
+      </div>
+
+      <div class="field">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/upload.js"></script>
+</body>
+
+</html>
