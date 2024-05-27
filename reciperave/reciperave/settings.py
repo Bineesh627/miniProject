@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-import os.path
+import os
 TEMPLATE_DIR=(os.path.join(os.path.dirname(__file__), 'templates'),)
 
 
@@ -134,9 +134,10 @@ ADMIN_MEDIA_PREFIX='/static/admin/'
 MEDIA_URL='/media/'
 
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
-import os.path
-STATICFILES_DIRS=((os.path.join(os.path.dirname(__file__), 'static')),)
-STATIC_ROOT= os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_FINDERS=(
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

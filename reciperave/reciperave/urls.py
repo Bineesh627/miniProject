@@ -24,7 +24,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('upload', upload, name="upload"),
+    path('upload/', upload, name="upload"),
 ]+ static(settings.MEDIA_URL, documents_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
 if settings.DEBUG:
