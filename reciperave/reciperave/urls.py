@@ -23,8 +23,15 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('loginForm/', loginForm, name="loginForm"),
+    path('registerForm/', registerForm, name="registerForm"),
+    path('feedbackForm/', feedbackForm, name="feedbackForm"),
+    path('uploadForm/', uploadForm, name="uploadForm"),
     path('admin/', admin.site.urls),
     path('upload/', upload, name="upload"),
+    path('login/', login, name="login"),
+    path('register/', register, name="register"),
+    path('feedback/', feedback, name="feedback"),
 ]+ static(settings.MEDIA_URL, documents_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
 if settings.DEBUG:

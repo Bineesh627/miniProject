@@ -39,13 +39,13 @@ python manage.py runserver
 
 ## Initialization commands
 
-To create a Django project, use the following command in Python:
+To create a Django project, use the following command:
 
 ```
 django-admin startproject <project name>
 ```
 
-To create an app in Django, use the following command in Python:
+To create an app in Django, use the following command:
 
 ```
 django-admin startapp <app name>

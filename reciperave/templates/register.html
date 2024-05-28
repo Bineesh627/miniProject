@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
 <body>
   <div class="container">
     <div class="center">
-      <form id="registerForm" action="" method="post">
+      <form id="registerForm" action="/registerForm/" method="post">
         <div class="input-field">
           <input type="text" id="fname" name="fname" required>
           <label for="fname">First Name</label>
@@ -48,7 +49,7 @@
       </form>
     </div>
   </div>
-  <script src="js/register.js"></script>
+  <script src="{% static 'js/register.js' %}"></script>
 </body>
 
 </html>
