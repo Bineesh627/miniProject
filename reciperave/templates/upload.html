@@ -11,15 +11,15 @@
 
 <body>
   <div class="container">
-    <form id="ingredientForm" action="/uploadForm/" enctype="multipart/form-data">
+    <form action="/uploadForm/" method="post" enctype="multipart/form-data">
       <div class="field">
-        <label for="title">Recipe Name</label>
-        <input type="text" id="title" name="title" required>
+        <label for="recipe_name">Recipe Name</label>
+        <input type="text" id="recipe_name" name="recipe_name" required>
       </div>
 
       <div class="field">
-        <label for="time">Total Time</label>
-        <input type="number" name="time" id="time">
+        <label for="total_time">Total Time</label>
+        <input type="number" name="total_time" id="total_time">
       </div>
 
       <div class="field">
@@ -42,29 +42,13 @@
       </div>
 
       <div class="field">
-        <label for="imageUpload">Photo</label>
-        <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+        <label for="photo_video">Photo</label>
+        <input type="file" id="photo_video" name="photo_video">
       </div>
 
       <div class="field">
-        <label for="videoUpload">Video</label>
-        <input type="file" id="videoUpload" name="videoUpload" accept="video/*">
-      </div>
-
-      <h3>Ingredients</h3>
-      <div id="ingredientsContainer">
-        <div class="ingredient-row">
-          <label for="amount1">Amount</label>
-          <input type="number" id="amount1" name="amount[]" min="0" step="any" placeholder="e.g., 1.5">
-          <label for="ingredient1">Ingredient</label>
-          <input type="text" id="ingredient1" name="ingredient[]" placeholder="e.g., Sugar">
-        </div>
-      </div>
-      <button type="button" id="addIngredientButton">Add Ingredient</button>
-
-      <div class="field">
-        <label for="instructions">Instructions</label>
-        <textarea id="instructions" name="instructions" rows="6" required></textarea>
+        <label for="instruction">Instructions</label>
+        <textarea id="instruction" name="instruction" rows="6" required></textarea>
       </div>
 
       <div class="field">
@@ -72,8 +56,6 @@
       </div>
     </form>
   </div>
-
-  <script src="{% static 'js/upload.js' %}"></script>
 </body>
 
 </html>
