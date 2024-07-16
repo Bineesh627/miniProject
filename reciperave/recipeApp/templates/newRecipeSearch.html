@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+</head>
+<body>
+    <br>
+    <br>
+    <table border="1">
+        <tr>
+            <td>Recipe Name</td>
+            <td>Total Time</td>
+            <td>Dish Type</td>
+            <td>Description</td>
+            <td>Photo/Video</td>
+            <td>instruction</td>
+        </tr>
+        {% for i in list %}
+        <tr>
+            <td>{{ i.recipe_name }}</td>
+            <td>{{ i.total_time }}</td>
+            <td>{{ i.dishtype }}</td>
+            <td>{{ i.description }}</td>
+            <td><img src="/media/{{i.photo_video}}" style="height: 150px;width: 100px;border-radius: 5px 5px 75px 75px;"/></td>
+            <td>{{ i.instruction }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

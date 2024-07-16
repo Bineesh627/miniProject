@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Upload</title>
+</head>
+<body>
+    <form action="/updatenAction/">
+        <table>
+            {% for i in list %}
+            <tr>
+                
+                <td>
+                    <input type="hidden" name="id" value="{{id}}"  id="recipe-name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Recipe Name</td>
+                <td>
+                    <input type="text" name="recipe_name" value="{{i.recipe_name}}"  id="recipe-name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Time</td>
+                <td>
+                    <input type="text" name="total_time" value="{{i.total_time}}" id="total-time">
+                </td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>
+                    <textarea name="description" id="description" cols="30" rows="10">{{i.description}}</textarea>
+                </td>
+            </tr>
+            
+            <!-- <tr>
+                <td>Instructions</td>
+                <td>
+                    <textarea name="instruction" id="instructions" cols="30" rows="10">{{i.instruction}}</textarea>
+                </td>
+            </tr> -->
+
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- <ul>
+        <li><a href="/adminhome/">Home</a></li>
+        <li><a href="/viewreg/">User register</a></li>
+        <li><a href="/viewfeedback/">View feedback</a></li>
+        <li><a href="/categorys/">manage categorys</a></li>
+        <li><a href="/viewrecipe/">manage recipe</a></li>
+        <li><a href="/index/">Logout</a></li>
+
+    </ul> -->
+    <table border="1">
+        <tr>
+            <th>fname</th>
+            <th>lname</th>
+            <th>username</th>
+            <!-- <th>email</th>
+            <th>Phone</th> -->
+        </tr>
+        {% for i in lists %}
+        <tr>
+            <td>{{i.fname}}</td>
+            <td>{{i.lname}}</td>
+            <td>{{i.username}}</td>
+            <!-- <td>{{i.email}}</td>
+            <td>{{i.phone}}</td> -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Update</title>
+</head>
+<body>
+    <form action="/profileUpdateAction/">
+        <table>
+            {% for i in list %}
+            <tr>
+                <td>
+                    <input type="hidden" name="id" value="{{i.uid}}"  id="recipe-name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>username</td>
+                <td>
+                    <input type="text" value="{{i.username}}" name="username">
+                </td>
+            </tr>
+
+            <tr>
+                <td>email</td>
+                <td>
+                    <input type="email" value="{{i.email}}" name="email">
+                </td>
+            </tr>
+          
+            <tr>
+                <td><input type="submit" value="Update"></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
+</html>
